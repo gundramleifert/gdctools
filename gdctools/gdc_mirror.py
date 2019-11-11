@@ -167,7 +167,7 @@ class gdc_mirror(GDCtool):
                 or not os.path.isfile(savepath)):
 
             # New file, mirror to this folder
-            time = 180
+            time = 1800
             retry = 0
             while retry <= retries:
                 try:
@@ -183,7 +183,7 @@ class gdc_mirror(GDCtool):
                     retry += 1
                     # Give some more time, in case the file is large...
                     # TODO: is this worth it?
-                    time += 180
+                    time += 1800
 
             if retry > retries:
                 # A partially downloaded file will interfere with subsequent
